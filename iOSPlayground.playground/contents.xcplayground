@@ -6,6 +6,5 @@
         <page name='Incremental Table Views'/>
         <page name='Reducers'/>
         <page name='Sort'/>
-        <page name='ViewControllerPresentations'/>
     </pages>
 </playground>
