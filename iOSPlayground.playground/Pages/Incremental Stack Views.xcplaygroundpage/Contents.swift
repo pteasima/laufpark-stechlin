@@ -17,7 +17,7 @@ let stackView = IBox(s)
 s.axis = .vertical
 s.distribution = .equalSpacing
 
-stackView.bindArrangedSubviews(to: labels)
+stackView.bindArrangedSubviews(to: labels, animationDuration: 10)
 
 import PlaygroundSupport
 
@@ -33,6 +33,6 @@ DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(2), execut
 })
 
 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(3), execute: {
-    backgroundColor.write(.red)
+    condition.write { _ in true }
 })
 

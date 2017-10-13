@@ -23,7 +23,7 @@ public func navigationController(_ viewControllers: ArrayWithHistory<IBox<UIView
     return result
 }
 
-extension IBox where V: UINavigationController {
+public extension IBox where V: UINavigationController {
     func appendViewController(_ vc: IBox<UIViewController>) {
         self.unbox.viewControllers.append(vc.unbox)
         self.disposables.append(vc)
