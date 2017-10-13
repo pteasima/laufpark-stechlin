@@ -150,8 +150,9 @@ driver.send(.present1)
 driver.send(.present2)
 
 
-//DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(550)) { //works
-DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500)) { //modal2 stays presented (presentations didnt finish in time for dismissal, see bindModalChild above)
+//DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(1000)) { //works
+DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(100)) { //modal2 stays presented (presentations didnt finish in time for dismissal, see bindModalChild above)
+//DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500)) { // looks like its not even determistic :( this worked for me once.
     driver.send(.dismiss2)
 }
 
